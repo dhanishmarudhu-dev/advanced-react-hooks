@@ -1,10 +1,13 @@
-import React from "react";
-import Counter from "./components/counter/Counter";
+import { useRef } from 'react';
+import MyInput from './components/MyInput';
 
 const App = () => {
+  const myInputRef = useRef(null);
   return (
     <div>
-      <Counter />
+      <MyInput ref={myInputRef} />
+      <button onClick={() => myInputRef.current.focusInput()}>Focus</button>
+      <button onClick={() => myInputRef.current.clearInput()}>Clear</button>
     </div>
   )
 }
