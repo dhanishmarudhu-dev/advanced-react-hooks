@@ -1,9 +1,10 @@
 import React from "react";
+import Counter from "./components/counter/Counter";
 
 const App = () => {
   return (
     <div>
-      sfsdf
+      <Counter />
     </div>
   )
 }
